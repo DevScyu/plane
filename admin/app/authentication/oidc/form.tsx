@@ -207,7 +207,7 @@ export const InstanceOpenIDConnectConfigForm: FC<Props> = (props) => {
       <div className="flex flex-col gap-8">
         <div className="grid grid-cols-2 gap-x-12 gap-y-8 w-full">
           <div className="flex flex-col gap-y-4 col-span-2 md:col-span-1 pt-1">
-            <div className="pt-2.5 text-xl font-medium">GitLab-provided details for Plane</div>
+            <div className="pt-2.5 text-xl font-medium">OIDC-provided details for Plane</div>
             {OIDC_FORM_FIELDS.map((field) => (
               <ControllerInput
                 key={field.key}
