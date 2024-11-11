@@ -21,11 +21,11 @@ const InstanceOpenIDConnectAuthenticationPage = observer(() => {
   // state
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   // config
-  const enableOpenIDConnectConfig = formattedConfig?.IS_GITLAB_ENABLED ?? "";
+  const enableOpenIDConnectConfig = formattedConfig?.IS_OIDC_ENABLED ?? "";
 
   useSWR("INSTANCE_CONFIGURATIONS", () => fetchInstanceConfigurations());
 
-  const updateConfig = async (key: "IS_GITLAB_ENABLED", value: string) => {
+  const updateConfig = async (key: "IS_OIDC_ENABLED", value: string) => {
     setIsSubmitting(true);
 
     const payload = {
